@@ -1,0 +1,36 @@
+{% extends "fridge_app/base.html" %}
+
+{% block content %}
+    <h1>Item List</h1>
+
+    <form class="form-inline" method="GET" action="{% url 'items-home' %}">
+        <div class="form-group mr-2">
+            <input class="form-control" type="text" name="query" placeholder="Search...">
+        </div>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Fridge</th>
+            <th>Expiry Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in item_list %}
+            <tr>
+                <td><a href="{% url 'item_update' item.id %}" readonly>{{ item.name }}</a></td>
+                <td><a href="{% url 'item_update' item.id %}" readonly>{{ item.qty }}</a></td>
+                <td><a href="{% url 'item_update' item.id %}" readonly>{{ item.category }}</a></td>
+                <td><a href="{% url 'item_update' item.id %}" readonly>{{ item.fridge.name }}</a></td>
+                <td><a href="{% url 'item_update' item.id %}" readonly>{{ item.expiry_date |date:"Y-m-d" }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

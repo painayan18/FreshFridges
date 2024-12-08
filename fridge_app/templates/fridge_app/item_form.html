@@ -1,0 +1,45 @@
+{% extends "fridge_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Add Item</h1>
+    <form class="form" method="POST" action="{% url 'item_create' %}">
+        {% csrf_token %}
+
+        <!-- Fields for the form -->
+        <div class="form-group">
+            <label for="id_name">Name:</label>
+            <input class="form-control" type="text" id="id_name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_category">Category:</label>
+            <input class="form-control" type="text" id="id_category" name="category" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_qty">Quantity:</label>
+            <input class="form-control" type="number" id="id_qty" name="qty" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_fridge">Fridge:</label>
+            <select class="form-control" id="id_fridge" name="fridge" required>
+                {% for fridge in fridge_list %}
+                    {% if fridge.user == request.user %}
+                        <option value="{{ fridge.id }}">{{ fridge.name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="id_expiry_date">Expiry Date:</label>
+            <input class="form-control" type="date" id="id_expiry_date" name="expiry_date" required>
+        </div>
+
+        <!-- Submit button  -->
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+
+{% endblock content %}

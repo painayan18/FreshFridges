@@ -1,0 +1,25 @@
+{% extends "fridge_app/base.html" %}
+
+{% block content %}
+
+    <h1>Fridge List</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for fridge in fridge_list %}
+            <tr>
+                <td><a href="{% url 'fridge_update' fridge.id %}" readonly>{{ fridge.name }}</a></td>
+                <td><a href="{% url 'fridge_update' fridge.id %}" readonly>{{ fridge.location }}</a></td>
+                </td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
