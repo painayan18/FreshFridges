@@ -2,7 +2,7 @@
 
 web app homepage: http://www.fridgemanagement.com/
 
-![screen1.png](screen1.png)
+![screen1.png](media/screen1.png)
 
 ## System Requirements
 
@@ -18,19 +18,19 @@ expired items that need to be replaced for shopping lists.
 On the 'add item' page (click 'add item' in the sidebar menu) add item to fridge database and include name, item
 category, quantity, and expiration date.
 
-![screen2.png](screen2.png)
+![screen2.png](media/screen2.png)
 
 Display expired items in the fridge
 
-![screen3.png](screen3.png)
+![screen3.png](media/screen3.png)
 
 Expired items are automatically added to your shopping list
 
-![screen4.png](screen4.png)
+![screen4.png](media/screen4.png)
 
 Remove an item from the fridge or update the number of items for a given item in the fridge 
 
-![screen5.png](screen5.png)
+![screen5.png](media/screen5.png)
 
 
 ## Upcoming Features

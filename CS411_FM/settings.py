@@ -24,7 +24,13 @@ SECRET_KEY = 'django-insecure-!nfa8*7=l33c14lwzth5f04j+h0tl+lm)q1z0-7i9r+y153(=s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fridgemanagement.com', 'www.fridgemanagement.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'fridgemanagement.com',
+    'www.fridgemanagement.com',
+    'localhost',
+    '127.0.0.1',
+    "fresh-fridges-boring-warthog-cj.cfapps.us10-001.hana.ondemand.com"
+]
 
 # Application definition
 
