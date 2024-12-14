@@ -1,6 +1,6 @@
-# Fridge Management Web App (Beta)
+# FridgeFridges Web App
 
-web app homepage: http://www.fridgemanagement.com/
+[View Live App](https://www.nayanpai.net/freshfridges)
 
 ![screen1.png](media/screen1.png)
 
